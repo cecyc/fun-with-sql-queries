@@ -4,7 +4,7 @@ Assignment for this week is to answer the following question about SQL, based on
 
 ###Answers
 
-1. Numbers of users in the database.
+####1) Numbers of users in the database.
 
 I used the following code:
 
@@ -14,7 +14,7 @@ SELECT COUNT(*) FROM users;
 
 There are **50 users** in the database.
 
-2. What are the 5 most expensive items?
+####2) What are the 5 most expensive items?
 
 I used the following code:
 
@@ -33,7 +33,7 @@ Sleek Wooden Hat       | 9390
 Ergonimic Steel Car    | 9341
 
 
-3. What is the cheapest book?
+####3) What is the cheapest book?
 
 I used the following code:
 
@@ -49,7 +49,7 @@ SELECT * FROM items WHERE category LIKE "book";
 ```
 ... I do not get anything because it is looking for exactly "book."
 
-4. Who lives at “6439 Zetta Hills, Willmouth, WY”? Do they have another address?
+####4) Who lives at “6439 Zetta Hills, Willmouth, WY”? Do they have another address?
 
 I used the following code to find the user ID in addresses
 
@@ -94,7 +94,7 @@ id          user_id     street            city        state       zip
 44          40          54369 Wolff Forg  Lake Bryon  CA          31587
 ```
 
-5. Correct Virginie Mitchell’s address to “New York, NY, 10108”.
+####5) Correct Virginie Mitchell’s address to “New York, NY, 10108”.
 
 First, I had to find the user's user_id:
 
@@ -116,7 +116,7 @@ UPDATE addresses SET city = "New York" WHERE id = "41";
 UPDATE addresses SET zip = "10108" WHERE id = "41";
 ```
 
-6. How much would it cost to buy one of each tool?
+####6) How much would it cost to buy one of each tool?
 
 To get this answer, I used the SUM method:
 
@@ -126,7 +126,7 @@ SELECT SUM(price) FROM items WHERE category LIKE "tools";
 
 The answer I got after running that query is **7383**.
 
-7. How many items did we sell?
+#### 7)How many items did we sell?
 To get this answer, I used the SUM method once again, this time, calling it on quantity.
 
 ```
@@ -135,7 +135,7 @@ SELECT SUM(quantity) FROM orders;
 
 The answer I got after running that query is **2125**.
 
-8. How much was spent on books?
+####8) How much was spent on books?
 This was by far the trickest of the queries, in which I had to use the JOIN method, while performing a multiplication and a sum. The code I used is as follows:
 
 ```
@@ -153,7 +153,7 @@ SUM(quantity * items.price)
 
 Based on that query which contains the category "Books" and categories that include "books" but are not just books, we get the following answer: **503,761**.
 
-9. Simulate buying an item by inserting a User for yourself and an Order for that User.
+####9) Simulate buying an item by inserting a User for yourself and an Order for that User.
 
 In order to simulate buying an item, I first created a user with the following query:
 
