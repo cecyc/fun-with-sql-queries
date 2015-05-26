@@ -126,7 +126,7 @@ SELECT SUM(price) FROM items WHERE category LIKE "tools";
 
 The answer I got after running that query is **7383**.
 
-#### 7)How many items did we sell?
+####7) How many items did we sell?
 To get this answer, I used the SUM method once again, this time, calling it on quantity.
 
 ```
