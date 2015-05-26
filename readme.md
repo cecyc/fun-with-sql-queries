@@ -24,13 +24,13 @@ SELECT * FROM items ORDER BY price DESC;
 
 Based on the output, I was able to see that the following items were the most expensive ones:
 
-| Item                   | Price     |
---------------------------------------
-| Small Cotton Gloves    | 9984      |
-| Small Wooden Computer  | 9859      |
-| Awesome Granite Pants  | 9790      |
-| Sleek Wooden Hat       | 9390      |
-|Ergonimic Steel Car     | 9341      |
+Item                   | Price
+-----------------------|--------
+Small Cotton Gloves    | 9984
+Small Wooden Computer  | 9859
+Awesome Granite Pants  | 9790
+Sleek Wooden Hat       | 9390
+Ergonimic Steel Car    | 9341
 
 
 3. What is the cheapest book?
@@ -166,6 +166,6 @@ Once I created a new user, I added a new order for that user:
 INSERT INTO orders VALUES (378, "51", "1", "1", CURRENT_TIMESTAMP);
 ```
 
-That's it! We are not SQL wizards!
+That's it! We are now SQL wizards!
 
 
