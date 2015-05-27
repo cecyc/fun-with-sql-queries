@@ -32,6 +32,7 @@ Awesome Granite Pants  | 9790
 Sleek Wooden Hat       | 9390
 Ergonimic Steel Car    | 9341
 
+You can also append "LIMIT 5" to only get the 5 most expensive items. I used SELECT * because I wanted to see all of the data. I like seeing all the data :)
 
 ####3) What is the cheapest book?
 
@@ -139,7 +140,8 @@ The answer I got after running that query is **2125**.
 This was by far the trickest of the queries, in which I had to use the JOIN method, while performing a multiplication and a sum. The code I used is as follows:
 
 ```
-SELECT SUM(quantity * items.price) FROM orders JOIN items ON orders.item_id = items.id WHERE category LIKE "books";
+SELECT SUM(quantity * items.price) FROM orders JOIN items
+ON orders.item_id = items.id WHERE category LIKE "books";
 ```
 
 This code only selects "Books" and does not select any category that is Books and something else (like "Books and Toys"). Based on this output, the answer is **420,566**.
@@ -147,8 +149,8 @@ This code only selects "Books" and does not select any category that is Books an
 However, if we are to sum all items that contain the keyword "Books" in its category, you can run the following query:
 
 ```
-SELECT SUM(quantity * items.price) FROM orders JOIN items ON orders.item_id = items.id WHERE category LIKE "book%";
-SUM(quantity * items.price)
+SELECT SUM(quantity * items.price) FROM orders JOIN items
+ON orders.item_id = items.id WHERE category LIKE "book%";
 ```
 
 Based on that query which contains the category "Books" and categories that include "books" but are not just books, we get the following answer: **503,761**.
