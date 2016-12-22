@@ -1,6 +1,6 @@
 ##Intro to SQL
 
-Assignment for this week is to answer the following question about SQL, based on the provided file "store.sqlite3"
+Assignment for this week is to answer the following questions about SQL, based on the provided file "store.sqlite3"
 
 ###Answers
 
